@@ -140,6 +140,7 @@
 
 - Pré-condições: 
     - Sistema disponivel (no caso subido através do docker) 
+    - possuir tutoriais publicados para que tenha conteudo
 
 - Passos: 
     1. Abrir postman 
@@ -166,3 +167,85 @@
         "createdAt": "2026-02-05T21:59:36.000Z",
         "updatedAt": "2026-02-05T21:59:36.000Z"
     },
+
+---
+
+## CT-005
+- ID: CT - busca tutorial publicado sem possuir publicados - 005
+
+- titulo: busca tutotial publicado sem possuir nada publicado
+
+- descrição: testar a busca de um tutorial publicado sem possuir nenhum tutorial ja publicado dentro da API.
+
+- endpoint: /api/tutorials/published
+
+- metodo: GET
+
+- Pré-condições: 
+    - Sistema disponivel (no caso subido através do docker) 
+
+- Passos: 
+    1. Abrir postman 
+    2. Selecionar o metodo GET
+    3. inserir a URL corretamente junto ao endpoint
+    4. clicar em send
+
+- resultado esperado: 
+    - Status 200 OK
+    - Body vazio ou mensagem de nenhum tutorial publicado
+
+---
+
+## CT-006
+- ID: CT - busca tutorial pelo id válido - 006
+
+- titulo: busca tutotial pelo id válido
+
+- descrição: testar a busca de um tutorial através de um ID válido dentro da API.
+
+- endpoint: /api/tutorials/{id}
+
+- metodo: GET
+
+- Pré-condições: 
+    - Sistema disponivel (no caso subido através do docker) 
+    - exixtir um tutorial válido com ID
+
+- Passos: 
+    1. Abrir postman 
+    2. Selecionar o metodo GET
+    3. inserir a URL corretamente junto ao endpoint + ID 
+    4. clicar em send
+
+- resultado esperado: 
+    - Status 200 OK
+    - Body com dados do tutorial buscado 
+
+---
+
+## CT-007
+- ID: CT - busca tutorial pelo id inválido - 007
+
+- titulo: busca tutotial pelo id inválido
+
+- descrição: testar a busca de um tutorial através de um ID inválido, um Id que não existe dentro da API.
+
+- endpoint: /api/tutorials/{id-inválido}
+
+- metodo: GET
+
+- Pré-condições: 
+    - Sistema disponivel (no caso subido através do docker) 
+
+- Passos: 
+    1. Abrir postman 
+    2. Selecionar o metodo GET
+    3. inserir a URL corretamente junto ao endpoint + ID inválido
+    4. clicar em send
+
+- resultado esperado: 
+    - Status 400 bad request
+    - Body com erro mostrando ID inválido 
+
+---
+
