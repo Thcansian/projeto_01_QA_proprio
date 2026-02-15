@@ -249,3 +249,28 @@
 
 ---
 
+## CT-008
+- ID: CT - atualiza tutorial pelo id válido - 008
+
+- titulo: atualiza tutotial pelo id válido
+
+- descrição: testar a atualização de um tutorial através de um ID válido,com dados possiveis e corretos para atualizar dentro da API.
+
+- endpoint: /api/tutorials/{id-inválido}
+
+- metodo: GET
+
+- Pré-condições: 
+    - Sistema disponivel (no caso subido através do docker) 
+
+- Passos: 
+    1. Abrir postman 
+    2. Selecionar o metodo GET
+    3. inserir a URL corretamente junto ao endpoint + ID inválido
+    4. clicar em send
+
+- resultado esperado: 
+    - Status 400 bad request
+    - Body com erro mostrando ID inválido 
+
+---
