@@ -270,7 +270,7 @@ Cada caso contém:
 **Descrição:** Validar comportamento para ID e dados válidos para atualização.
 
 **Endpoint:** `/api/tutorials/{id}`
-**Método:** POST
+**Método:** PUT
 
 **Pré-condições:**
 
@@ -279,7 +279,7 @@ Cada caso contém:
 **Passos:**
 
 1. Abrir Postman
-2. Método POST
+2. Método PUT
 3. Inserir endpoint + ID válido
 4. configurar o JSON com atualizações corretas
 5. Send
@@ -299,7 +299,7 @@ Cada caso contém:
 **Descrição:** Validar comportamento para ID inválido e dados válidos para atualização.
 
 **Endpoint:** `/api/tutorials/{id}`
-**Método:** POST
+**Método:** PUT
 
 **Pré-condições:**
 
@@ -308,7 +308,7 @@ Cada caso contém:
 **Passos:**
 
 1. Abrir Postman
-2. Método POST
+2. Método PUT
 3. Inserir endpoint + ID inválido 
 4. configurar o JSON com atualizações corretas
 5. Send
@@ -327,7 +327,7 @@ Cada caso contém:
 **Descrição:** Validar comportamento para ID válido e dados inválidos para atualização.
 
 **Endpoint:** `/api/tutorials/{id}`
-**Método:** POST
+**Método:** PUT
 
 **Pré-condições:**
 
@@ -336,7 +336,7 @@ Cada caso contém:
 **Passos:**
 
 1. Abrir Postman
-2. Método POST
+2. Método PUT
 3. Inserir endpoint + ID válido 
 4. configurar o JSON com atualizações inválidos 
 5. Send
