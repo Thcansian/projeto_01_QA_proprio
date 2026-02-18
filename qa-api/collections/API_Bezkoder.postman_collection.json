@@ -1,0 +1,702 @@
+{
+  "info": {
+    "_postman_id": "97797e50-2c2d-4f22-acc8-4c63c9c9f0ad",
+    "name": "API_Bezkoder",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40239812"
+  },
+  "item": [
+    {
+      "name": "cria_tutoriais",
+      "item": [
+        {
+          "name": "CT-001-dados_validos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"CT-001\",\r\n  \"description\": \"Criando tutorial dados OK\",\r\n  \"published\": true\r\n}"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-019-published_invalido",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"CT-019\",\r\n  \"description\": \"Criando tutorial published invalido\",\r\n  \"published\": \"sim\"\r\n}"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-017-obrigatorio_vazio",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"\",\r\n  \"description\": \"Criando tutorial com titulo vazio\",\r\n  \"published\": true\r\n}"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-018-obrigatorio_tipo_inválido",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": 1234,\r\n  \"description\": \"Criando tutorial com titulo vazio\",\r\n  \"published\": true\r\n}"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-015-apenas_obrigatorio",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"CT-015\"\r\n}"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-016-publicado_falso",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"CT-016\",\r\n    \"published\": false\r\n}"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-014-dados_duplicados_validos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"CT-008\",\r\n    \"description\": \"atualizando tutorial sem titulo e published string\",\r\n    \"published\": true\r\n}"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-003-sem_camp_obrigatorio",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \r\n  \"description\": \"teste sem campo obrigatorio (title)\",\r\n  \"published\": true\r\n }"
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "busca_tutoriais",
+      "item": [
+        {
+          "name": "CT-002-busca_total_OK",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-020-busca_total_sem_dados",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-005-publicados_sem_dados",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/published",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "published"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-004-publicados_valido",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/published",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "published"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-006-busca_ID_valido",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/5",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-007-busca_ID_invalido",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/500",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "500"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-022-busca_ID_string",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/\"10\"",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "\"10\""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "atualiza_tutoriais",
+      "item": [
+        {
+          "name": "CT-008-dados_validos",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n        \"title\": \"CT-008\",\r\n        \"description\": \"atualizando tutorial dados OK\",\r\n        \"published\": false\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/5",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-023-sem_body",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/10",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "10"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-010-ID_valido_dados_invalidos",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n        \"title\": \"CT-010\",\r\n        \"description\": \"atualizando tutorial sem titulo e published string\",\r\n        \"published\": \"sim\"\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/5",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-009-ID_invalido",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": " {\r\n        \"title\": \"CT-009\",\r\n        \"description\": \"atualizando tutorial inexistente dados OK\",\r\n        \"published\": true\r\n }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/500",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "500"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "deleta_tutoriais",
+      "item": [
+        {
+          "name": "CT-011-ID_valido",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/1",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-012-ID_invalido",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials/100",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials",
+                "100"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-013-DEL_todos",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CT-024-DEL_sem_dados",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{URLusual}}/api/tutorials",
+              "host": [
+                "{{URLusual}}"
+              ],
+              "path": [
+                "api",
+                "tutorials"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
