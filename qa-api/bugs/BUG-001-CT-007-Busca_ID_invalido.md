@@ -1,12 +1,12 @@
 ## 🆔 ID
 
-BUG-001
+BUG-001-CT-007-Busca_ID_invalido
 
 ---
 
 ## 📌 Título
 
-API retorna 200 OK sem body ao buscar tutorial com ID inexistente
+API retorna 200 OK sem body ao buscar tutorial com ID inexistente (500)
 
 ---
 
@@ -23,7 +23,7 @@ GET `/api/tutorials/{id}`
 Exemplo testado:
 
 ```
-GET /api/tutorials/9999
+GET /api/tutorials/500
 ```
 
 ---
@@ -32,7 +32,7 @@ GET /api/tutorials/9999
 
 * Ambiente: Local (Docker)
 * Ferramenta: Postman
-* Data do teste: 16/02/2026
+* Data do teste: 17/02/2026
 * Versão da API: v1
 
 ---
@@ -52,7 +52,7 @@ GET /api/tutorials/9999
 3. Inserir endpoint:
 
 ```
-http://localhost:6868/api/tutorials/9999
+http://localhost:6868/api/tutorials/500
 ```
 
 4. Clicar em **Send**
@@ -116,7 +116,7 @@ Média
 Print da execução no Postman:
 
 ```
-./evidencias/postman/bug-001-id-invalido.png
+./evidencias/postman/CT-007-BUG-001-Busca_ID_invalido-BUG.png
 ```
 
 ---
@@ -127,14 +127,6 @@ Possível causa:
 
 * Controller não trata retorno nulo do banco
 * Falta validação de existência antes do response
-
-Exemplo provável no código:
-
-```js
-if (!data) {
-  res.send(data); // deveria retornar 404
-}
-```
 
 ---
 

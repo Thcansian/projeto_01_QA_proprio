@@ -1,7 +1,3 @@
-# 🐞 BUG REPORT — API
-
----
-
 # 🐞 BUG REPORT
 
 ---

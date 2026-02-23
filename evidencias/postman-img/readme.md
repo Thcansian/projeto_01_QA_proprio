@@ -26,16 +26,17 @@ Onde:
 
 | Caso de Teste | Descrição             | Evidência                          |
 | ------------- | --------------------- | ---------------------------------- |
-| CT-001        | Criar tutorial válido | CT-001-create-valid.png            |
-| CT-002        | Criar sem título      | CT-002-create-invalid.png          |
-| CT-003        | Listar tutoriais      | CT-003-get-all.png                 |
-| CT-004        | Buscar ID inexistente | CT-004-get-id-invalido-confere.png |
+| CT-001        | Criar tutorial válido | CT-001-cria-validos.png            |
+| CT-002        | Busca dados validos   | CT-002-busca-validos.png          |
+| CT-003        | Cria tutoriais s/obrigatorio      | CT-003-cria-sem-titulo.png                 |
+| CT-004        | Buscar publicados | CT-004-busca-published.png |
 
 ---
 
 ## ⚠️ Observações
 
 Arquivos contendo a marcação **(confere)** no nome indicam comportamentos que necessitaram validação adicional ou que apresentaram inconsistências durante os testes, podendo estar associados a bugs documentados na pasta correspondente.
+Arquivos com "BUG" no nome, foram revisados e encontradas inconsistências em algum quesito e relatadas na aba bugsna pasta qa-api
 
 ---
 
